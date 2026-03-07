@@ -19,10 +19,10 @@ const skillCategories = [
     skills: [
       { name: 'HTML5', icon: SiHtml5, color: '#E34F26', level: 90 },
       { name: 'CSS3', icon: SiCss, color: '#1572B6', level: 85 },
-      { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E', level: 85 },
+      { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E', level: 75 },
       { name: 'React', icon: SiReact, color: '#61DAFB', level: 82 },
-      { name: 'Angular', icon: SiAngular, color: '#DD0031', level: 70 },
-      { name: 'Tailwind', icon: SiTailwindcss, color: '#38BDF8', level: 80 },
+      { name: 'Angular', icon: SiAngular, color: '#DD0031', level: 80 },
+      { name: 'Tailwind', icon: SiTailwindcss, color: '#38BDF8', level: 75 },
     ],
   },
   {
@@ -32,9 +32,9 @@ const skillCategories = [
     skills: [
       { name: 'Node.js', icon: SiNodedotjs, color: '#68A063', level: 80 },
       { name: 'Express.js', icon: SiExpress, color: '#FFFFFF', level: 75 },
-      { name: 'Python', icon: SiPython, color: '#3776AB', level: 70 },
+      { name: 'Python', icon: SiPython, color: '#3776AB', level: 55 },
       { name: 'Java', icon: FiCoffee, color: '#ED8B00', level: 65 },
-      { name: 'Django', icon: SiDjango, color: '#092E20', level: 55 },
+      { name: 'Django', icon: SiDjango, color: '#092E20', level: 40 },
       { name: 'Spring Boot', icon: SiSpringboot, color: '#6DB33F', level: 50 },
     ],
   },
@@ -43,9 +43,9 @@ const skillCategories = [
     color: '#47A248',
     borderColor: 'rgba(71,162,72,0.2)',
     skills: [
-      { name: 'MongoDB', icon: SiMongodb, color: '#47A248', level: 80 },
+      { name: 'MongoDB', icon: SiMongodb, color: '#47A248', level: 85 },
       { name: 'MySQL', icon: SiMysql, color: '#4479A1', level: 75 },
-      { name: 'Firebase', icon: SiFirebase, color: '#FFCA28', level: 65 },
+      { name: 'Firebase', icon: SiFirebase, color: '#FFCA28', level: 70 },
     ],
   },
   {
