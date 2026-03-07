@@ -581,3 +581,22 @@ body {
     display: none;
   }
 }
+/* ✅ ADD THESE LINES AT THE VERY TOP OF src/styles/globals.css */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+img,
+iframe,
+video {
+  max-width: 100%;
+}
