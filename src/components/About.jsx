@@ -12,7 +12,7 @@ const facts = [
   { icon: FiUser, label: 'Name', value: 'Karan Kumar' },
   { icon: FiMail, label: 'Email', value: 'babukaran526@gmail.com' },
   { icon: FiPhone, label: 'Phone', value: '+91 9546322440' },
-  { icon: FiMapPin, label: 'Location', value: 'Bihar, India' },
+  { icon: FiMapPin, label: 'Location', value: 'Bihar(Siwan) , India' },
   { icon: FiBookOpen, label: 'Degree', value: 'B.Tech CSE' },
   { icon: FiCalendar, label: 'Graduation', value: 'Expected 2027' },
   { icon: FiGlobe, label: 'Languages', value: 'Hindi, English' },
@@ -100,7 +100,7 @@ const About = () => {
                   <FiCode />
                 </div>
                 <span style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.85rem', fontFamily: 'JetBrains Mono' }}>
-                  // about.js
+                  // about me
                 </span>
               </div>
 
