@@ -17,15 +17,10 @@ const navLinks = [
 const Navbar = ({ theme, toggleTheme }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
-  const [isMobile, setIsMobile] = useState(false);
   const { isScrolled, scrollProgress } = useScrollProgress();
 
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-
     const handleResize = () => {
-      checkMobile();
       if (window.innerWidth >= 768) setMenuOpen(false);
     };
     window.addEventListener('resize', handleResize);
@@ -45,10 +40,7 @@ const Navbar = ({ theme, toggleTheme }) => {
           position: 'fixed',
           top: 0, left: 0, right: 0,
           zIndex: 100,
-          // ✅ FIX 1: tighter horizontal padding on mobile
-          padding: isScrolled
-            ? `12px ${isMobile ? '16px' : '24px'}`
-            : `20px ${isMobile ? '16px' : '24px'}`,
+          padding: isScrolled ? '12px 24px' : '20px 24px',
           transition: 'all 0.3s ease',
           background: isScrolled ? 'rgba(5, 5, 8, 0.85)' : 'transparent',
           backdropFilter: isScrolled ? 'blur(20px)' : 'none',
@@ -61,43 +53,22 @@ const Navbar = ({ theme, toggleTheme }) => {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          // ✅ FIX 2: prevent content from overflowing on very small screens
-          minWidth: 0,
         }}>
 
           {/* Logo */}
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            style={{ cursor: 'pointer', flexShrink: 0 }}
-          >
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} style={{ cursor: 'pointer', flexShrink: 0 }}>
             <Link to="home" smooth duration={500}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                 <div style={{
                   width: '38px', height: '38px', borderRadius: '50%',
                   overflow: 'hidden', border: '2px solid #6C63FF',
-                  boxShadow: '0 4px 15px rgba(108,99,255,0.4)',
-                  flexShrink: 0,
+                  boxShadow: '0 4px 15px rgba(108,99,255,0.4)', flexShrink: 0,
                 }}>
-                  <img
-                    src="/profile.jpg"
-                    alt="Karan Kumar"
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                  />
+                  <img src="/profile.jpg" alt="Karan Kumar" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
-                {/* ✅ FIX 3: hide name text on very small phones (<380px) to prevent crowding */}
                 <span style={{
-                  fontFamily: 'Space Grotesk',
-                  fontWeight: '700',
-                  // shrink font slightly on mobile
-                  fontSize: isMobile ? '1rem' : '1.1rem',
-                  color: 'white',
-                  letterSpacing: '-0.02em',
-                  // hide on very small screens using overflow trick
-                  overflow: 'hidden',
-                  whiteSpace: 'nowrap',
-                  maxWidth: isMobile ? '120px' : '200px',
-                  textOverflow: 'ellipsis',
+                  fontFamily: 'Space Grotesk', fontWeight: '700',
+                  fontSize: '1.1rem', color: 'white', letterSpacing: '-0.02em',
                 }}>
                   Karan Kumar
                 </span>
@@ -105,11 +76,8 @@ const Navbar = ({ theme, toggleTheme }) => {
             </Link>
           </motion.div>
 
-          {/* Desktop Nav Links */}
-          <div
-            style={{ display: 'flex', alignItems: 'center', gap: '4px' }}
-            className="hidden md:flex"
-          >
+          {/* ✅ Desktop Nav Links — NO inline display style, let Tailwind handle it */}
+          <div className="hidden md:flex" style={{ alignItems: 'center', gap: '4px' }}>
             {navLinks.map((link) => (
               <Link
                 key={link.to}
@@ -123,12 +91,10 @@ const Navbar = ({ theme, toggleTheme }) => {
                   fontSize: '0.9rem',
                   fontWeight: activeSection === link.to ? '600' : '400',
                   color: activeSection === link.to ? '#6C63FF' : 'rgba(255,255,255,0.7)',
-                  background: activeSection === link.to ? 'rgba(108, 99, 255, 0.12)' : 'transparent',
+                  background: activeSection === link.to ? 'rgba(108,99,255,0.12)' : 'transparent',
                   transition: 'all 0.2s ease',
-                  position: 'relative',
                   whiteSpace: 'nowrap',
                 }}
-                className="nav-link-item"
               >
                 {link.name}
               </Link>
@@ -136,16 +102,15 @@ const Navbar = ({ theme, toggleTheme }) => {
           </div>
 
           {/* Right Controls */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? '8px' : '12px', flexShrink: 0 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexShrink: 0 }}>
+
             {/* Theme Toggle */}
             <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
+              whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}
               onClick={toggleTheme}
               style={{
                 width: '38px', height: '38px', borderRadius: '10px',
-                background: 'rgba(255,255,255,0.05)',
-                border: '1px solid rgba(108,99,255,0.25)',
+                background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(108,99,255,0.25)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 cursor: 'pointer', color: 'rgba(255,255,255,0.8)', fontSize: '16px',
               }}
@@ -153,21 +118,21 @@ const Navbar = ({ theme, toggleTheme }) => {
               {theme === 'dark' ? <FiSun /> : <FiMoon />}
             </motion.button>
 
-            {/* Hire Me — desktop only */}
+            {/* ✅ Hire Me — desktop only, NO inline display style */}
             <motion.a
               href="mailto:babukaran526@gmail.com"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="btn-primary hidden md:flex"
+              whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
+              className="btn-primary hidden md:inline-flex"
               style={{ padding: '9px 18px', fontSize: '0.85rem' }}
             >
               Hire Me
             </motion.a>
 
-            {/* Hamburger — mobile only */}
+            {/* ✅ Hamburger — mobile only, NO inline display style */}
             <motion.button
               whileTap={{ scale: 0.9 }}
               onClick={() => setMenuOpen(!menuOpen)}
+              className="md:hidden"
               style={{
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 width: '38px', height: '38px', borderRadius: '10px',
@@ -176,7 +141,6 @@ const Navbar = ({ theme, toggleTheme }) => {
                 cursor: 'pointer', color: 'white', fontSize: '18px',
                 transition: 'all 0.2s ease',
               }}
-              className="md:hidden"
             >
               {menuOpen ? <FiX /> : <FiMenu />}
             </motion.button>
@@ -198,8 +162,6 @@ const Navbar = ({ theme, toggleTheme }) => {
                 borderTop: '1px solid rgba(108,99,255,0.15)',
                 marginTop: '12px',
                 borderRadius: '16px',
-                // ✅ FIX 4: ensure menu never goes wider than screen
-                maxWidth: '100%',
               }}
             >
               <div style={{ padding: '12px' }}>
@@ -220,7 +182,6 @@ const Navbar = ({ theme, toggleTheme }) => {
                         justifyContent: 'space-between',
                         padding: '13px 16px',
                         borderRadius: '10px',
-                        // ✅ FIX 5: highlight active link in mobile menu too
                         color: activeSection === link.to ? '#6C63FF' : 'rgba(255,255,255,0.8)',
                         background: activeSection === link.to ? 'rgba(108,99,255,0.1)' : 'transparent',
                         fontSize: '0.95rem',
@@ -241,19 +202,12 @@ const Navbar = ({ theme, toggleTheme }) => {
                   </motion.div>
                 ))}
 
-                {/* Hire Me — full width in mobile menu */}
-                <div style={{ padding: '8px 4px', paddingTop: '12px', borderTop: '1px solid rgba(108,99,255,0.1)', marginTop: '4px' }}>
-                  {/* ✅ FIX 6: use proper flex display so icon + text align in mobile */}
+                {/* Hire Me full width */}
+                <div style={{ paddingTop: '12px', borderTop: '1px solid rgba(108,99,255,0.1)', marginTop: '4px' }}>
                   <a
                     href="mailto:babukaran526@gmail.com"
                     className="btn-primary"
-                    style={{
-                      width: '100%',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      gap: '8px',
-                    }}
+                    style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}
                   >
                     <FiMail style={{ fontSize: '15px' }} />
                     Hire Me
