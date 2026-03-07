@@ -37,7 +37,7 @@ const educationData = [
     title: 'Class X',
     institution: 'Bihar School Examination Board (BSEB)',
     location: 'Bihar, India',
-    period: '2019 – 2021',
+    period: '2020 – 2021',
     description:
       'Completed matriculation with strong foundation in Mathematics and Sciences.',
     tags: ['Science', 'Mathematics'],
