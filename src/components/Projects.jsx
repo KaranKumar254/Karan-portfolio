@@ -41,7 +41,7 @@ const projects = [
       { name: 'Express', icon: SiExpress, color: '#FFFFFF' },
       { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
     ],
-    github: 'https://github.com/KaranKumar254',
+    github: 'https://ai-chatbot-ku2m.onrender.com',
     live: '#',
     gradient: 'from-cyan-500/20 to-green-500/20',
     icon: FiCode,
