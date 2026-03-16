@@ -61,7 +61,7 @@ const projects = [
     { name: 'Express', icon: SiExpress, color: '#FFFFFF' },
     { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
   ],
-  github: 'https://github.com/KaranKumar254',
+  github: 'https://github.com/KaranKumar254/Skill-Gap-Analyzer',
   live: 'https://skill-gap-analyzer-frontend-ecui.onrender.com/',
   gradient: 'from-green-500/20 to-teal-500/20',
   icon: FiCode,
