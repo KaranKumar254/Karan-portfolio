@@ -21,7 +21,7 @@ const projects = [
       { name: 'Express', icon: SiExpress, color: '#FFFFFF' },
       { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
     ],
-    github: 'https://github.com/KaranKumar254',
+    github: 'https://github.com/KaranKumar254/AcadZone',
     live: '#',
     gradient: 'from-purple-500/20 to-blue-500/20',
     icon: FiServer,
