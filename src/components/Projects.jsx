@@ -41,7 +41,7 @@ const projects = [
       { name: 'Express', icon: SiExpress, color: '#FFFFFF' },
       { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
     ],
-    github: 'https://github.com/KaranKumar254',
+    github: 'https://github.com/KaranKumar254/ai-chatbot-',
     live: 'https://ai-chatbot-ku2m.onrender.com',
     gradient: 'from-cyan-500/20 to-green-500/20',
     icon: FiCode,
@@ -49,26 +49,26 @@ const projects = [
     featured: true,
     tags: ['MERN Stack', 'AI/ML', 'Real-time'],
   },
-  {
-    id: 3,
-    title: 'Weather App',
-    category: 'Full Stack',
-    description:
-      'Real-time weather forecasting application using OpenWeather API. Built with MERN stack, displays current weather, 5-day forecasts, temperature trends and location-based weather data with beautiful UI.',
-    tech: [
-      { name: 'React', icon: SiReact, color: '#61DAFB' },
-      { name: 'Node.js', icon: SiNodedotjs, color: '#68A063' },
-      { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
-      { name: 'JS', icon: SiJavascript, color: '#F7DF1E' },
-    ],
-    github: 'https://github.com/KaranKumar254',
-    live: '#',
-    gradient: 'from-yellow-500/20 to-orange-500/20',
-    icon: FiDatabase,
-    iconColor: '#F59E0B',
-    featured: false,
-    tags: ['MERN Stack', 'OpenWeather API', 'REST API'],
-  },
+ {
+  id: 3,
+  title: 'Skill Gap Analyzer',
+  category: 'AI / Full Stack',
+  description:
+    'An AI-based Skill Gap Analyzer that helps users identify missing skills required for specific job roles. The system analyzes user skills and compares them with industry requirements to suggest learning resources and improvement areas.',
+  tech: [
+    { name: 'React', icon: SiReact, color: '#61DAFB' },
+    { name: 'Node.js', icon: SiNodedotjs, color: '#68A063' },
+    { name: 'Express', icon: SiExpress, color: '#FFFFFF' },
+    { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
+  ],
+  github: 'https://github.com/KaranKumar254',
+  live: 'https://skill-gap-analyzer-frontend-ecui.onrender.com/',
+  gradient: 'from-green-500/20 to-teal-500/20',
+  icon: FiCode,
+  iconColor: '#10B981',
+  featured: true,
+  tags: ['Skill Analysis', 'AI/ML', 'Career Guidance'],
+ },
 ];
 
 const ProjectCard = ({ project, index, inView }) => {
