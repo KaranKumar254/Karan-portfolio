@@ -37,7 +37,7 @@ const educationData = [
     title: 'Class X',
     institution: 'Bihar School Examination Board (BSEB)',
     location: 'Bihar, India',
-    period: '2020 – 2021',
+    period: '2019 – 2021',
     description:
       'Completed matriculation with strong foundation in Mathematics and Sciences.',
     tags: ['Science', 'Mathematics'],
@@ -48,6 +48,33 @@ const educationData = [
 ];
 
 const experienceData = [
+  {
+    type: 'experience',
+    title: 'Web Developer Intern',
+    institution: 'InfoTact Solutions',
+    location: 'Remote',
+    period: '05 May 2026 – 05 Jul 2026',
+    description:
+      'Successfully completed a Web Development Internship at InfoTact Solutions. Worked on responsive web applications, frontend development, reusable UI components, and real-world development tasks while enhancing problem-solving and collaboration skills.',
+    tags: ['React', 'JavaScript', 'HTML', 'CSS'],
+    icon: FiBriefcase,
+    color: '#10B981',
+    status: 'Completed',
+    documents: [
+      {
+        label: 'Internship Certificate',
+        file: '/infotact-internship.pdf',
+        icon: FiAward,
+        color: '#10B981',
+      },
+      {
+        label: 'Training Certificate',
+        file: '/infotact-training.pdf',
+        icon: FiFileText,
+        color: '#6366F1',
+      },
+    ],
+  },
   {
     type: 'experience',
     title: 'Frontend Developer Intern',
