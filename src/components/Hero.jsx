@@ -294,7 +294,7 @@ const Hero = () => {
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 overflow: 'hidden', position: 'relative',
               }}>
-                <img src="/profile.jpg" alt="Karan Kumar" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
+                <img src="/profile.jpeg" alt="Karan Kumar" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
               </div>
             </motion.div>
 
