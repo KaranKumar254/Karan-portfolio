@@ -37,7 +37,7 @@ import SectionHeading from './SectionHeading';
 const projects = [
   {
     id: 1,
-    title: 'University Portal (LMS)',
+    title: 'University Portal (LMS) AcadZone',
     category: 'Full Stack',
 
     description:
@@ -50,8 +50,8 @@ const projects = [
       { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
     ],
 
-    github: 'https://github.com/KaranKumar254/AcadZone',
-    live: 'https://acadzone.onrender.com/',
+    github: 'https://github.com/KaranKumar254/AcadZone-Frontend',
+    live: 'https://acadzone-frontend.onrender.com/',
 
     icon: FiBookOpen,
     iconColor: '#6C63FF',
