@@ -17,7 +17,7 @@ const projects = [
       'A comprehensive Learning Management System built with MEAN stack. Features role-based access control for Admin, Teacher & Student dashboards. Includes course management, assignment submission, and grade tracking.',
     tech: [
       { name: 'Angular', icon: SiAngular, color: '#DD0031' },
-      { name: 'SpringBoot', icon: SiNodedotjs, color: '#68A063' },
+      { name: 'SpringBoot', icon: SiSpringBoot, color: '#68A063' },
       { name: 'Express', icon: SiExpress, color: '#FFFFFF' },
       { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
     ],
